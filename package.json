@@ -1,7 +1,7 @@
 {
   "name": "dbushell-grunt-mustatic",
-  "description": "Grunt task for rendering static HTML templates with Mustache",
-  "version": "0.1.1",
+  "description": "Grunt task for rendering static HTML with Mustache templates",
+  "version": "0.1.2",
   "author": {
     "name": "David Bushell",
     "email": "hi@dbushell.com",

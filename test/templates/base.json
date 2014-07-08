@@ -2,7 +2,7 @@
     "title": "grunt-Mustatic",
 
     "site_owner": "David Bushell",
-    "description": "Grunt task for rendering static HTML templates with Mustache",
+    "description": "Grunt task for rendering static HTML with Mustache templates",
 
     "nav": {
         "nav__list": {

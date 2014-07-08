@@ -1,7 +1,7 @@
 grunt-Mustatic
 ==============
 
-> Grunt task for rendering static HTML templates with [Mustache](http://mustache.github.io/)
+> Grunt task for rendering static HTML with [Mustache](http://mustache.github.io/) templates
 
 ## Getting Started
 This plugin requires Grunt `~0.4.2`
@@ -26,18 +26,18 @@ Example task configuration:
 
 ```js
 grunt.initConfig({
-    mustatic: {
-        options: {
-            src: 'templates',
-            dest: 'build'
-        },
-        prod: {
-            globals: {
-                lang: 'en',
-                charset: 'utf-8'
-            }
-        }
+  mustatic: {
+    options: {
+      src: 'templates',
+      dest: 'build'
+    },
+    prod: {
+      globals: {
+        lang: 'en',
+        charset: 'utf-8'
+      }
     }
+  }
 });
 ```
 

@@ -15,7 +15,7 @@ module.exports = function(grunt)
 {
     'use strict';
 
-    grunt.registerMultiTask('mustatic', 'Render static HTML templates with Mustache', function()
+    grunt.registerMultiTask('mustatic', 'render static HTML with Mustache templates', function()
     {
 
         var options = this.options({
