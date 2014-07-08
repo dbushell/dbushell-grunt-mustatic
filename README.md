@@ -45,32 +45,49 @@ grunt.initConfig({
 
 #### options.src
 
-Type: `String`, default: `"templates"`
+Type: `String` default: `"templates"`
 
-This is the source directory of your mustache templates and JSON data.
+This is the source directory of your mustache templates and JSON data. The directory should be structured like so:
+
+```
+templates/
+    base.html
+    base.json
+        pages/
+            index.html
+            index.json
+        partials/
+            header.html
+            footer.html
+```
+
+* `base.html` is your root template can should contain at least `{{>content}}`
+* `base.json` includes your global data not defined at task configuration
+* `pages/` contains templates to be rendered with template specific data
+* `partials/` contains partial templates to be included in pages
+
 
 #### options.dest
 
-Type: `String`, default: `"build"`
+Type: `String` default: `"build"`
 
 This is the build directory where rendered HTML files will be saved.
 
 #### options.ext
 
-Type: `String`, default: `"html"`
+Type: `String` default: `"html"`
 
-The file extension used for your mustache templates.
+This is the file extension used for your mustache templates.
 
-### globals
+#### globals
 
-Type: `Object`, default: `{ }`
+Type: `Object` default: `{ }`
 
-Global template data in which `base.json` will be merged. These are environment-specific.
+This is global template data in which `base.json` will be merged. These are environment-specific.
 
 * * *
 
 Created by: [David Bushell](http://dbushell.com) | [@dbushell](http://twitter.com/dbushell) (based on: [grunt-mustache-html](https://github.com/haio/grunt-mustache-html))
-
 Using: [Hogan.js](https://github.com/twitter/hogan.js) to compile Mustache templates
 
 Copyright © David Bushell | MIT license
