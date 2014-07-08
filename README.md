@@ -7,10 +7,9 @@ grunt-Mustatic
 
 This plugin requires Grunt `~0.4.2`
 
+
 * * *
 
-Created by: [David Bushell](http://dbushell.com) | [@dbushell](http://twitter.com/dbushell)
-
-Based on: [grunt-mustache-html](https://github.com/haio/grunt-mustache-html)
+Created by: [David Bushell](http://dbushell.com) | [@dbushell](http://twitter.com/dbushell) (based on: [grunt-mustache-html](https://github.com/haio/grunt-mustache-html))
 
 Copyright © David Bushell | MIT license

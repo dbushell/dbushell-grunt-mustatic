@@ -41,7 +41,8 @@ module.exports = function(grunt)
             options: {
                 src  : 'test/templates',
                 dest : 'test/build',
-                ext  : 'html'
+                ext  : 'html',
+                navStates : true
             },
             build: {
                 globals: {
@@ -54,8 +55,8 @@ module.exports = function(grunt)
 
     });
 
-    grunt.registerTask('test', ['clean', 'mustatic', 'nodeunit']);
+    grunt.registerTask('test', ['jshint', 'clean', 'mustatic', 'nodeunit']);
 
-    grunt.registerTask('default', ['jshint', 'test']);
+    grunt.registerTask('default', ['test']);
 
 };
