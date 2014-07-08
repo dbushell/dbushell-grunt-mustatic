@@ -88,7 +88,7 @@ The `{{title}}` variable can be defined in `base.json` and overridden in `index.
 Any nested directory structure within `pages/` will be maintained when the static site is built (see: [`options.dest`](#optionsdest)).
 Partials can be organised and referenced by directory, e.g. `{{>header/nav}}` would include `partials/header/nav.html`.
 
-See the [Mustache documentation](http://mustache.github.io/mustache.5.html) for templating help.
+See the [**Mustache documentation**](http://mustache.github.io/mustache.5.html) for templating help.
 
 #### options.dest
 
@@ -108,8 +108,37 @@ Type: `Object` default: `{ }`
 
 This is global template data in which `base.json` will be merged. This data is environment-specific.
 
+### Options (experimental)
 
-* * *
+**grunt-Mustatic** has been designed to allow pre and post render functions to aid static website building.
+
+#### options.relLinks
+
+Type: `Boolean` default: `true`
+
+This option will convert all URLs in `href` and `src` attributes relative to the template path.
+
+For example, if both pages include this `nav` partial:
+
+```html
+<nav>
+    <a href="index.html">Home</a>
+    <a href="section/content.html">Content</a>
+</nav>
+```
+
+The URLs in `section/content.html` will be converted to:
+
+```html
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="./content.html">Content</a>
+</nav>
+```
+
+For this option to work all URLs should be written relative to the root of the template directory.
+
+# Authors
 
 Created by: [David Bushell](http://dbushell.com) | [@dbushell](http://twitter.com/dbushell) (based on: [grunt-mustache-html](https://github.com/haio/grunt-mustache-html))
 
