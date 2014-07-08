@@ -41,7 +41,7 @@ module.exports = function(grunt)
             options: {
                 src  : 'test/templates',
                 dest : 'test/build',
-                ext  : 'html',
+                ext  : 'mustache',
                 navStates : true
             },
             build: {

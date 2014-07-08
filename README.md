@@ -18,9 +18,42 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('dbushell-grunt-mustatic');
 ```
 
-## Mustatic task
+## The Mustatic Task
 
+### Configuration
 
+Example task configuration:
+
+```js
+grunt.initConfig({
+    mustatic: {
+        options: {
+            src  : 'templates',
+            dest : 'build'
+        },
+        prod: {
+            globals: {
+                lang    : 'en',
+                charset : 'utf-8'
+            }
+        }
+    }
+});
+```
+
+### Options
+
+#### options.src
+
+Type: `string` (default: `templates`)
+
+This is the source directory of your mustache templates and data.
+
+#### options.dest
+
+Type: `string` (default: `build`)
+
+This is the build directory where your rendered HTML files are saved.
 
 * * *
 

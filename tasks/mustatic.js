@@ -19,8 +19,8 @@ module.exports = function(grunt)
     {
 
         var options = this.options({
-            src  : 'src',
-            dest : 'dest',
+            src  : 'templates',
+            dest : 'build',
             ext  : 'html',
             navStates : false,
             relLinks  : true
