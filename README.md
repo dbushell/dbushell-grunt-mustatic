@@ -83,7 +83,10 @@ A minimal base template would look like this:
 </html>
 ```
 
-Use `{{>content}}` in `base.html` to include the page. The `{{title}}` variable can be defined in `base.json` and overridden in `index.json`, for example. Any nested directory structure within `pages/` will be maintained when the static site is built (see: [options.dest](#optionsdest)). Partials can be organised and referenced by directory, e.g. `{{>header/nav}}`.
+Use `{{>content}}` in `base.html` to include the page.
+The `{{title}}` variable can be defined in `base.json` and overridden in `index.json`, for example.
+Any nested directory structure within `pages/` will be maintained when the static site is built (see: [`options.dest`](#optionsdest)).
+Partials can be organised and referenced by directory, e.g. `{{>header/nav}}` would include `partials/header/nav.html`.
 
 See the [Mustache documentation](http://mustache.github.io/mustache.5.html) for templating help.
 
