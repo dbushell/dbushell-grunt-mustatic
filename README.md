@@ -47,25 +47,28 @@ grunt.initConfig({
 
 Type: `String` default: `"templates"`
 
-This is the source directory of your mustache templates and JSON data. The directory should be structured like so:
+This is the source directory of your mustache templates and JSON data.
+
+The directory should be structured like so:
 
 ```
 templates/
-    base.html
-    base.json
-        pages/
-            index.html
-            index.json
-        partials/
-            header.html
-            footer.html
+  +-- base.html
+  +-- base.json
+  |
+  +-- pages/
+  |     +-- index.html
+  |     +-- index.json
+  |
+  +-- partials/
+        +-- header.html
+        +-- footer.html
 ```
 
 * `base.html` is your root template can should contain at least `{{>content}}`
-* `base.json` includes your global data not defined at task configuration
-* `pages/` contains templates to be rendered with template specific data
+* `base.json` is your global data not defined in the task configuration
+* `pages/` contains templates to be rendered (with optional template specific data)
 * `partials/` contains partial templates to be included in pages
-
 
 #### options.dest
 
