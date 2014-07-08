@@ -108,17 +108,15 @@ Type: `Object` default: `{ }`
 
 This is global template data in which `base.json` will be merged. This data is environment-specific.
 
-### Options (experimental)
+### Experimental Options
 
-**grunt-Mustatic** has been designed to allow pre and post render functions to aid static website building.
+grunt-Mustatic has been designed to allow pre and post render functions to aid static website building.
 
 #### options.relLinks
 
 Type: `Boolean` default: `true`
 
-This option will convert all URLs in `href` and `src` attributes relative to the template path.
-
-For example, if both pages include this `nav` partial:
+This option will convert all URLs in `href` and `src` attributes relative to the template path. For example, if both pages include this `{{>nav}}` partial:
 
 ```html
 <nav>
@@ -138,7 +136,7 @@ The URLs in `section/content.html` will be converted to:
 
 For this option to work all URLs should be written relative to the root of the template directory.
 
-# Authors
+## Credits
 
 Created by: [David Bushell](http://dbushell.com) | [@dbushell](http://twitter.com/dbushell) (based on: [grunt-mustache-html](https://github.com/haio/grunt-mustache-html))
 
