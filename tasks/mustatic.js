@@ -73,7 +73,7 @@ module.exports = function(grunt)
                     locals   = mustatic.merge({}, globals);
 
                 // add template URL to locals
-                locals.url = relPath;
+                locals.url = name + '.html';
 
                 // load template data and merge into locals
                 if (grunt.file.exists(tmpData)) {

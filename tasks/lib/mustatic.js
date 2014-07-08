@@ -8,6 +8,8 @@
 
 'use strict';
 
+var URI = require('URIjs');
+
 function each(obj, func)
 {
     var i, length, keys = Object.keys(obj);
@@ -47,13 +49,10 @@ module.exports.preNavStates = function(page, name, locals)
 module.exports.postRelLinks = function(render, name, locals)
 {
     // prefix for relative URLs
-    var rel = '', depth = (name.match(/\//g)||[]).length;
-
-    while(depth--) { rel += '../'; }
-
-    if (!rel.length) {
-        return render;
-    }
+    // var depth = (name.match(/\//g)||[]).length;
+    // if (!depth) {
+    //     return render;
+    // }
 
     // find all relative URLs
     var head, tail, match, offset, found = [],
@@ -70,6 +69,8 @@ module.exports.postRelLinks = function(render, name, locals)
         }
     }
 
+    var path = new URI('/' + locals.url);
+
     // replace relative URLs (in reverse to avoid offset changes)
     found.reverse().forEach(function(match, i)
     {
@@ -78,8 +79,10 @@ module.exports.postRelLinks = function(render, name, locals)
         head = render.substring(0, offset);
         tail = render.substring(offset + match[2].length);
 
+        var newPath = new URI('/' + match[2]).relativeTo(path).toString();
+
         // stitch render back together with new URL
-        render = head + rel + match[2] + tail;
+        render = head + (newPath || './' + path.filename()) + tail;
     });
 
     return render;
