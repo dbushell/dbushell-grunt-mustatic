@@ -1,5 +1,5 @@
 {
-  "name": "dbushell-grunt-Mustatic",
+  "name": "dbushell-grunt-mustatic",
   "description": "Grunt task for rendering static HTML templates with Mustache",
   "version": "0.1.0",
   "author": {
@@ -25,16 +25,16 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://raw.github.com/dbushell/grunt-svg2png/master/LICENSE.txt"
+      "url": "https://github.com/dbushell/dbushell-grunt-mustatic/blob/master/LICENSE"
     }
   ],
-  "homepage": "https://github.com/dbushell/dbushell-grunt-Mustatic",
+  "homepage": "https://github.com/dbushell/dbushell-grunt-mustatic",
   "repository": {
     "type": "git",
-    "url": "git://github.com/dbushell/dbushell-grunt-Mustatic.git"
+    "url": "git://github.com/dbushell/dbushell-grunt-mustatic.git"
   },
   "bugs": {
-    "url": "https://github.com/dbushell/dbushell-grunt-Mustatic/issues"
+    "url": "https://github.com/dbushell/dbushell-grunt-mustatic/issues"
   },
   "main": "Gruntfile.js",
   "engine": "node >= 0.10.x",
