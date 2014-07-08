@@ -83,7 +83,9 @@ A minimal base template would look like this:
 </html>
 ```
 
-Use `{{>content}}` in `base.html` to include the page. The `{{title}}` variable can be defined in `base.json` and overridden in `index.json`, for example. Any nested directory structure within `pages/` is maintained when the static site is built.
+Use `{{>content}}` in `base.html` to include the page. The `{{title}}` variable can be defined in `base.json` and overridden in `index.json`, for example. Any nested directory structure within `pages/` will be maintained when the static site is built (see: [options.dest](#optionsdest)). Partials can be organised and referenced by directory, e.g. `{{>header/nav}}`.
+
+See the [Mustache documentation](http://mustache.github.io/mustache.5.html) for templating help.
 
 #### options.dest
 
@@ -101,12 +103,13 @@ This is the file extension used for your mustache templates.
 
 Type: `Object` default: `{ }`
 
-This is global template data in which `base.json` will be merged. These are environment-specific.
+This is global template data in which `base.json` will be merged. This data is environment-specific.
 
 
 * * *
 
 Created by: [David Bushell](http://dbushell.com) | [@dbushell](http://twitter.com/dbushell) (based on: [grunt-mustache-html](https://github.com/haio/grunt-mustache-html))
+
 Using: [Hogan.js](https://github.com/twitter/hogan.js) to compile Mustache templates
 
 Copyright © David Bushell | MIT license
