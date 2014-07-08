@@ -39,7 +39,7 @@ module.exports = function(grunt)
         var globals = mustatic.merge({
                 'assets': 'assets/'
             },
-            this.data.globals);
+            this.data.globals || { });
 
         // merge globals with base data
         if (grunt.file.exists(baseData)) {

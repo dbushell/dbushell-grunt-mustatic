@@ -1,7 +1,7 @@
 grunt-Mustatic
 ==============
 
-> Grunt task for rendering static HTML templates with Mustache
+> Grunt task for rendering static HTML templates with [Mustache](http://mustache.github.io/)
 
 ## Getting Started
 This plugin requires Grunt `~0.4.2`
@@ -28,13 +28,13 @@ Example task configuration:
 grunt.initConfig({
     mustatic: {
         options: {
-            src  : 'templates',
-            dest : 'build'
+            src: 'templates',
+            dest: 'build'
         },
         prod: {
             globals: {
-                lang    : 'en',
-                charset : 'utf-8'
+                lang: 'en',
+                charset: 'utf-8'
             }
         }
     }
@@ -45,18 +45,32 @@ grunt.initConfig({
 
 #### options.src
 
-Type: `string` (default: `templates`)
+Type: `String`, default: `"templates"`
 
-This is the source directory of your mustache templates and data.
+This is the source directory of your mustache templates and JSON data.
 
 #### options.dest
 
-Type: `string` (default: `build`)
+Type: `String`, default: `"build"`
 
-This is the build directory where your rendered HTML files are saved.
+This is the build directory where rendered HTML files will be saved.
+
+#### options.ext
+
+Type: `String`, default: `"html"`
+
+The file extension used for your mustache templates.
+
+### globals
+
+Type: `Object`, default: `{ }`
+
+Global template data in which `base.json` will be merged. These are environment-specific.
 
 * * *
 
 Created by: [David Bushell](http://dbushell.com) | [@dbushell](http://twitter.com/dbushell) (based on: [grunt-mustache-html](https://github.com/haio/grunt-mustache-html))
+
+Using: [Hogan.js](https://github.com/twitter/hogan.js) to compile Mustache templates
 
 Copyright © David Bushell | MIT license
