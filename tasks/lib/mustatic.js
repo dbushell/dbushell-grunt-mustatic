@@ -64,9 +64,10 @@ module.exports.postRelLinks = function(render, name, locals)
             continue;
         }
         // ignore external URLs (starting with schema)
-        if (! /^([a-z]+):/.test(match[2])) {
-            found.push(match);
+        if (/^([a-z]+):/.test(match[2])) {
+            continue;
         }
+        found.push(match);
     }
 
     var path = new URI('/' + locals.url);
