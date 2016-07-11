@@ -1,7 +1,7 @@
 {
   "name": "dbushell-grunt-mustatic",
   "description": "Grunt task for rendering static HTML with Mustache templates",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": {
     "name": "David Bushell",
     "email": "hi@dbushell.com",
@@ -34,7 +34,7 @@
   "main": "Gruntfile.js",
   "engine": "node >= 4.x.x",
   "dependencies": {
-    "URIjs": "^1.13.2",
+    "urijs": "^1.13.2",
     "hogan.js": "^3.0.2"
   },
   "devDependencies": {
