@@ -1,7 +1,7 @@
 {
   "name": "dbushell-grunt-mustatic",
   "description": "Grunt task for rendering static HTML with Mustache templates",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": {
     "name": "David Bushell",
     "email": "hi@dbushell.com",
@@ -37,15 +37,15 @@
     "url": "https://github.com/dbushell/dbushell-grunt-mustatic/issues"
   },
   "main": "Gruntfile.js",
-  "engine": "node >= 0.10.x",
+  "engine": "node >= 4.x.x",
   "dependencies": {
     "URIjs": "^1.13.2",
     "hogan.js": "^3.0.2"
   },
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-clean": "^0.5.0",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-nodeunit": "^0.4.1"
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-nodeunit": "^1.0.0"
   }
 }

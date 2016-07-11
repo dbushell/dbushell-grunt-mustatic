@@ -1,16 +1,16 @@
 {
-    "title": "grunt-Mustatic",
+  "title": "grunt-Mustatic",
 
-    "site_owner": "David Bushell",
-    "description": "Grunt task for rendering static HTML with Mustache templates",
-    "repository": "https://github.com/dbushell/dbushell-grunt-mustatic/",
+  "site_owner": "David Bushell",
+  "description": "Grunt task for rendering static HTML with Mustache templates",
+  "repository": "https://github.com/dbushell/dbushell-grunt-mustatic/",
 
-    "nav": {
-        "nav__list": {
-            "nav__item": [
-                { "name": "Home", "url": "index.html" },
-                { "name": "Guide", "url": "guide/index.html" }
-            ]
-        }
+  "nav": {
+    "nav__list": {
+      "nav__item": [
+        { "name": "Home", "url": "index.html" },
+        { "name": "Guide", "url": "guide/index.html" }
+      ]
     }
+  }
 }
